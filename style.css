@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #f7b32b;
+}
+
+.movie-container {
+    margin: 20px 0;
+}
+
+.movie-container label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.movie-container select {
+    background-color: #f7b32b;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    appearance: none;
+    transition: background-color 0.3s ease;
+}
+
+.movie-container select:hover {
+    background-color: #ffa500;
+}
+
+.seat {
+    background-color: #444451;
+    height: 20px;
+    width: 25px;
+    margin: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.seat.selected {
+    background-color: #6bff6b;
+}
+
+.seat.occupied {
+    background-color: #ff6b6b;
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.showcase {
+    list-style: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small {
+    margin-left: 10px;
+    color: #ccc;
+}
+
+.screen {
+    background-color: #f7b32b;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+    transform: rotateX(-45deg);
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+p.text {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+p.text span {
+    color: #6bff6b;
+}
+
